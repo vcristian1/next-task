@@ -35,7 +35,7 @@ model Project {
   due         DateTime?
   tasks        Task[]
   deleted     Boolean   @default(false)
-
+// Tells Prisma we want to make a unique constraint on this complex field.
   @@unique([ownerId, name])
   @@index([ownerId, id])
 }
@@ -63,6 +63,6 @@ model Task {
 
   due     DateTime?
   deleted Boolean   @default(false)
-
+// I want to index the owner ID of a task because I'm pronably going to write a query that says give me all the tasks to this owner.
   @@index([ownerId])
 }
