@@ -14,7 +14,7 @@ const fetcher = async ({ url, method, body, json = true }) => {
   
     if (json) {
       const data = await res.json();
-      return data;
+      return data.data ;
     }
   };
   
