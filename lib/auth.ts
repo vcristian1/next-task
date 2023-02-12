@@ -2,7 +2,9 @@ import bcrypt from "bcrypt";
 import { SignJWT, jwtVerify } from "jose";
 import { db } from "./db";
 
+//Hash user password
 export const hashPassword = (password) => bcrypt.hash(password, 10);
+
 //Create a JWT (object) and put it into a standard unique string. This is our preferred method of authentication.
 export const createJWT = (user) => {
     // return jwt.sign({ id: user.id }, 'cookies')
@@ -42,6 +44,7 @@ export const getUserFromCookie = async (cookies) => {
     return user;
 };
 
+//Compare the hash password to the plain text password
 export const comparePasswords = (plainTextPassword, hashedPassword) =>
   bcrypt.compare(plainTextPassword, hashedPassword);
 
