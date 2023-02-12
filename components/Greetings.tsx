@@ -6,7 +6,7 @@ import { delay } from "@/lib/async";
 
 // Befote getting the user data, we need to verify that the user is signed in.
 const getData = async () => {
-  await delay(5000);
+  await delay(1000);
   const user = await getUserFromCookie(cookies());
   return user;
 };
