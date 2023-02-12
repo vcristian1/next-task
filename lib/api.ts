@@ -35,3 +35,12 @@ const fetcher = async ({ url, method, body, json = true }) => {
       json: false,
     });
   };
+
+  export const createNewProject = async (name) => {
+    return fetcher({
+      url: '/api/project',
+      method: 'POST',
+      body: {name},
+      json: true
+    })
+  }
