@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Card from "./Card";
-import logo from "@/assets/images/logo.png";
-import SidebarLink from "./SideBarLink";
+import SidebarLink from "./SidebarLink";
 
 const links = [
-  { label: "Home", icon: "Grid", link: "/home" },
+  { label: "Home", icon: 'Grid', link: "/home" },
   {
     label: "Calendar",
     icon: "Calendar",
@@ -21,14 +19,11 @@ const links = [
 const Sidebar = () => {
   return (
     <Card className="h-full w-40 flex items-center justify-between flex-wrap">
-      <div className="w-full flex justify-center items-center">
-        <Image src={logo} alt="Able logo" priority className="w-14" />
-      </div>
       {links.map((link) => (
         <SidebarLink link={link} />
       ))}
-    </Card>
-  );
-};
+  </Card>
+  )
+}
 
-export default Sidebar;
+export default Sidebar

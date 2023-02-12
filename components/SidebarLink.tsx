@@ -1,5 +1,4 @@
 "use client";
-//Client component so we add "use client"; at the top
 import Link from "next/link";
 import { Settings, User, Grid, Calendar } from "react-feather";
 import { usePathname } from "next/navigation";
