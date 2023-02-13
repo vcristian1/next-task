@@ -1,5 +1,7 @@
 import Card from "./Card";
 import SidebarLink from "./SidebarLink";
+import Image from "next/image";
+import logo from '../assets/target.svg'
 
 const links = [
   { label: "Home", icon: 'Grid', link: "/home" },
@@ -19,6 +21,7 @@ const links = [
 const Sidebar = () => {
   return (
     <Card className="h-full w-40 flex items-center justify-between flex-wrap">
+      <Image className="w-20" src={logo} alt={"logo"}/>
       {links.map((link) => (
         <SidebarLink link={link} />
       ))}
