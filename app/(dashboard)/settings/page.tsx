@@ -13,7 +13,7 @@ export default async function Page() {
               </Suspense>
           </div>
           <div className="flex flex-2 grow items-center flex-wrap mt-3 -m-3 scrollbar-hide">
-            <Button>Log Out</Button>
+            <Button className="ml-4" >Log Out</Button>
           </div>
         </div>
       </div>
