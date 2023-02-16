@@ -15,6 +15,7 @@ export default async function register(
         password: await hashPassword(req.body.password),
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        phonenumber: req.body.phonenumber
       },
     });
     //After user is created, create JWT for the user.
